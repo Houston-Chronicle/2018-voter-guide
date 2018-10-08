@@ -1,4 +1,4 @@
-# 2018 Primary Voter Guide
+# 2018 General Election Voter Guide
 This is a single-page application built by the Houston Chronicle for the 2018 general elections. This app will serve as a way for readers to see how candidates for public office answered questions regarding issues facing the state and how they plan on transforming Texas.
 ## Why and how we built this
 We built this app for voters to have an interactive, digital guide to the various candidates running in primaries in the Houston region. Our politics team in Austin started off the process by creating and sending a Google Forms questionnaire to people running for public office on the local, state and federal levels. Once candidates started responding, we pulled their answers into a CSV file and converted that into JSON, forming the backbone of the application.
