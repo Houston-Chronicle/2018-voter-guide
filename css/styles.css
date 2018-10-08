@@ -1,0 +1,418 @@
+/*Custom text styles*/
+p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    line-height: inherit;
+    color: #222;
+    margin-bottom: 24px
+}
+hr {
+    margin-top: 5px;
+    border-top: 3px solid #ddd
+}
+h1 {
+    margin-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold
+}
+h2 {
+    font-family: 'Sanchez', serif;
+    display: inline
+}
+h3 {
+    font-size: 30px;
+    font-family: 'Sanchez', serif;
+    margin-top: 10px
+}
+.name {
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    margin: 3% auto;
+    display: block;
+    line-height: 35px;
+}
+/*Intro and intro text styles*/
+.banner {
+    margin-bottom: 48px;
+}
+.prologue p {
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+#guide {
+    margin: 36px 0
+}
+.intro {
+    margin: 24px 0
+}
+.intro p {
+    text-align: center;
+    font-style: italic
+}
+.byline, .byline a {
+    font-size:14px;
+    text-decoration:none;
+}
+#invitation {
+    font-weight:bold;
+}
+/*Search bar/select styles*/
+.form {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.form li, option {
+    color: #222;
+    font-family: 'Lato', sans-serif;
+    border:1px solid lightgray;
+    padding:10px;
+}
+select {
+    color: #808080
+}
+.form li a {
+    text-decoration: none;
+    cursor: pointer
+}
+.form a:hover {
+    border-bottom: 0;
+    text-decoration: none
+}
+.input-special, select {
+    width: 100%;
+    height:7vh;
+    font-size: 16px;
+    padding: 12px;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid #ddd;
+}
+select:hover {
+    cursor: pointer
+}
+.searches {
+    font-size:20px;
+    color:#939393;
+    text-align:center;
+    margin:60px 0 18px;
+    font-family: 'Lora', serif;
+}
+@media (max-width:500px) {
+    .searches {
+        margin:12px 0 26px;
+    }
+    .guide {
+        margin: 24px 0;
+    }
+}
+/*Race select and candidate search results styles*/
+.results {
+    margin-bottom:10vh;
+}
+.candidate {
+    background-color:#DBDBDB19;
+    padding:25px;
+    margin-bottom: 36px;
+}
+.candidate p {
+    margin-bottom:0;
+    font-size:14px;
+    font-family: 'Lora', serif;
+}
+.candidate .img-responsive {
+    margin-top: 10%
+}
+.candidatecontact {
+    border-top:1px solid #ddd;
+    padding-top:15px;
+    text-align:center;
+}
+.candidatecontact p {
+    margin-bottom:8px;
+}
+.question {
+    font-weight:bold;
+}
+.moreanswers p {
+    font-family: 'Lato', serif;
+}
+.moreanswers .question {
+    font-size:22px;
+}
+.incumbent, .mobileincumbent {
+    font-size:20px;
+    padding:5px;
+    margin-left:15px;
+    font-style:italic;
+}
+.incumbent::before, .mobileincumbent::before {
+    content: "— ";
+}
+.mobileincumbent {
+    display: none;
+}
+@media (max-width:770px) {
+    .incumbent {
+        display:none;
+    }
+    p.mobileincumbent {
+        display:block;
+    }
+}
+.return {
+    margin-top: 10%;
+}
+/*No response*/
+.noresponse {
+    font-size:18px;
+    font-family: 'Lora', serif;
+    font-style:italic;
+    margin-top:24px;
+}
+/*Select candidate from race select menu*/
+.racecandidates {
+    margin-bottom:5vh;
+}
+.politician {
+    padding:0 10px;
+    font-size:14px;
+    display:inline;
+    font-weight: bold;
+}
+/* Hide the browser's default radio button */
+.racecandidates input {
+    position: absolute;
+
+}
+/*Custom button styles*/
+/* The container */
+.politician {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family:'Lora', serif;;
+}
+
+/* Hide the browser's default radio button */
+.politician input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.politician input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.politician input:checked ~ .checkmark:after {
+    background:#d3d3d3;
+}
+
+/* Style the indicator (dot/circle) */
+.politician .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+}
+/*Related coverage styles*/
+.relcov {
+    margin: 7% auto 2% auto;
+}
+.relcov h3 {
+    margin-bottom: 2%;
+    text-align:left;
+    font-weight:bold;
+    font-family: 'Lora', serif;
+}
+.relcov p {
+    margin-top: 6px;
+    font-family: 'Lato', sans-serif;
+    font-size:14px;
+}
+.relcov a:hover {
+    text-decoration: none;
+}
+/*Contact styles*/
+.contact h4 {
+    text-align:center;
+    margin-bottom:24px;
+    font-family: 'Lora', serif;
+}
+.contact p {
+    text-align:center;
+    font-size:14px;
+    font-family: 'Lora', serif;
+}
+.contact .img-responsive {
+    margin: 5% auto;
+}
+/*More information for candidates in race styles*/
+.moredetails {
+    margin-bottom: 24px;
+    padding-top: 24px
+}
+.candidate .component {
+    padding: 15px 0;
+}
+/*Hyperlink styles*/
+a {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 0
+}
+a:visited {
+    color: #222
+}
+a:hover {
+    border-bottom: 0;
+    cursor: pointer;
+    color: #222;
+    text-decoration:underline;
+}
+/*Modal sharing styles*/
+.modal .fa {
+    padding-right: 25px
+}
+.modal p {
+    font-size: 16px;
+    margin-bottom: 18px;
+    text-align: left
+}
+.modal a {
+    color: #222
+}
+@media(min-width:1200px) {
+    .share-modal .modal-content {
+        width: 50%;
+        margin: 0 auto
+    }
+}
+.share-modal a, .share-modal a:hover {
+    text-decoration: none;
+    border-bottom: 0
+}
+/*Navbar styles*/
+.navbar-default {
+    margin-bottom:0;
+}
+.navbar-brand>img {
+    display: block;
+    max-width: 228px;
+    max-height: 25px;
+}
+nav a {
+    border-bottom: 0
+}
+.btn {
+    margin: 36px auto;
+    font-family: 'Sanchez', serif
+}
+.btn:hover {
+    background-color: #fff;
+    border-color: #ccc
+}
+.btn,.btn-default,.btn-lg,.btn-block {
+    text-align: center
+}
+@media(max-width:500px) {
+    .btn-group-lg>.btn,.btn-lg {
+        font-size: 14px
+    }
+}
+/*Related stories for races styles*/
+.related {
+    margin-bottom: 10px
+}
+.stories {
+    padding-left: 0
+}
+.stories li,.stories li a {
+    font-family: 'Georgia', serif;
+    color: gray;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 5px
+}
+/* Mobile navbar styles */
+@media (max-width: 767px) {
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color:white;
+} 
+.navbar-default .navbar-nav > .open > a:focus {
+    color:white;
+    background-color:black;
+}
+}
+@media (max-width: 1220px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block!important;
+    }
+}
+@media only screen and (min-width : 768px) and (max-width : 1205px) {
+    .navbar-default .navbar-collapse {
+        max-height:100vh;
+    }
+}
