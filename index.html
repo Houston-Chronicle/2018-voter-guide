@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!-- Thce above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<!-- Social meta tags -->
 	<meta name="description" content="Need help vetting candidates before the November elections? Explore our voter guide.">
 	<meta name="keywords" content="Texas politics, Houston, Congress, elections, 2018 elections, midterms, midterm elections, 2018 midterms, Houston politics, voters guide, voting, voters, Houston voters, Democrats, Republicans, Libertarians, Texas legislature, Beto, Beto O'Rourke, Ted Cruz, Cruz, Abbott, Texas governor, U.S. Senate, Texas senator, Texas senate race">
@@ -45,14 +45,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
-<body ng-app="myApp"> 
+<body ng-app="myApp">
 	<!--Share modal-->
 	<div class="modal fade share-modal" tabindex="-1">
 		<div class="modal-dialog modal-lg">
-			<div class="modal-content"> 
-				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span>×</span></button> 
-					<h4 class="modal-title" id="myLargeModalLabel">SHARE</h4> 
-				</div> 
+			<div class="modal-content">
+				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+					<h4 class="modal-title" id="myLargeModalLabel">SHARE</h4>
+				</div>
 				<div class="modal-body">
 					<p><a href="http://www.facebook.com/dialog/feed?app_id=653292111352579&amp;link=https%3A%2F%2Fprojects.houstonchronicle.com%2F2018%2Felections%2Fvoters-guide%2F%3Futm_campaign%3Dfacebook-premium%26utm_source%3DCMS%2520Sharing%2520Button%26utm_medium%3Dsocial&amp;description=With%20a%20record%20number%20of%20contested%20Congressional%20races%20this%20year%2C%20Texas%20is%20at%20the%20center%20of%20the%20battle%20between%20Democrats%20and%20Republicans%20for%20control%20of%20the%20U.S.%20House%20and%20Senate.%0AStudy%20the%20issues%2C%20hear%20from%20the%20candidates%2C%20and%20research%20what%E2%80%99s%20on%20your%20ballot%20at%20the%20Houston%20Chronicle%20voters%20guide.&amp;picture=https%3A%2F%2Fs.hdnux.com%2Fphotos%2F75%2F22%2F02%2F16064685%2F4%2FrawImage.jpg&amp;name=Get%20informed%3A%202018%20Elections" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></p>
 					<p><a class="twitter" href="https://twitter.com/intent/tweet?text=Get informed: 2018 Elections - Study the issues, hear from the candidates, and research what’s on your ballot at the Houston Chronicle voters guide https://projects.houstonchronicle.com/2018/elections/voters-guide/?utm_campaign=twitter-premium&utm_source=CMS%20Sharing%20Button&utm_medium=social" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></p>
@@ -90,7 +90,7 @@
 	</div>
 	</nav>
 	<!--Intro text-->
-	<div ng-controller="MyCtrl"> 
+	<div ng-controller="MyCtrl">
 		<div ng-hide="locations" id="main">
 			<img class="banner img-responsive" src="images/banner.jpg" />
 			<div class="container">
@@ -98,13 +98,13 @@
 					<div class="intro">
 						<h1>The Houston Chronicle Voter Guide</h1>
 						<p class="byline">By <a href="https://www.houstonchronicle.com/author/alejandra-matos/" target="_blank">Alejandra Matos</a>, <a href="https://www.houstonchronicle.com/author/jordan-rubio/" target="_blank">Jordan Rubio</a> and <a href="https://www.houstonchronicle.com/author/rachael-gleason/" target="_blank">Rachael Gleason</a></p>
-					</div>					
+					</div>
 					<div class="prologue col-md-10 col-md-offset-1"><a name="search"></a>
 						<p>We invited candidates running for statewide and federal offices in the 2018 midterm elections to answer questions about key issues facing Texas. The candidates’ unedited responses are presented as submitted to the Houston Chronicle. Some candidates did not respond to our questionnaire.</p>
-						<p id="invitation">Search by race or search by candidate below. To find out your districts, <a href="https://fyi.capitol.texas.gov/Home.aspx" target="_blank">click here</a>.</p>
-						<p ng-model="allRaces">To see all the races, <a ng-click="showAll()">click here</a></p>
+						<p>An asterisk (*) next to a candidate's name indicates the candidate was endorsed by the <a href="https://www.houstonchronicle.com/opinion/endorsements/" target="_blank">Houston Chronicle Editorial Board</a>, which is independent from the Houston Chronicle newsroom.</p>
+					    <p ng-model="allRaces" id="invitation">Search by race or search by candidate below. To see all the races, <a ng-click="showAll()">click here</a></p>
 					</div>
-				</div>				
+				</div>
 					<!--Search bars-->
 					<div id="guide">
 						<div class="container">
@@ -125,24 +125,24 @@
 									<ul class="form ng-hide" ng-show="!pickCandidate.name == ''" ng-click="selectCandidate()">
 								        <li ng-click="selectCandidates(candidate.name)" class="result" ng-repeat="candidate in candidates | filter: pickCandidate | limitTo:5">
 								        	<a>{{candidate.name}}</a>
-								        </li>								        
+								        </li>
 							        </ul>
-								</div><!--End candidate search bar-->				 
+								</div><!--End candidate search bar-->
 							</div>
 						</div>
 					</div><!--End search bars-->
 				</div>
 			</div>
 			<!--Race select results-->
-			<div class="results ng-hide" ng-show="racePicked || allRaces">
-				<div ng-repeat="race in races | filter:racePicked">
-					<div class="container">	
-						<div class="racecandidates col-md-10 col-md-offset-1">			
-		              		<h2 class="name">{{race.office}}</h2> 
+			<div class="results ng-hide" ng-show="racePicked || raceChosen">
+				<div ng-repeat="race in races | filter:racePicked | filter:filterByRace:true">
+					<div class="container">
+						<div class="racecandidates col-md-10 col-md-offset-1">
+		              		<h2 class="name">{{race.office}}</h2>
 		              		<p><em>Click on a candidate's name to see how they responded to the survey.</em></p>
-							<span ng-repeat="candidate in candidates | filter: race.office:true | orderBy: 'party'"> 
+							<span ng-repeat="candidate in candidates | filter: race.office:true | orderBy: 'party'">
 								<div class="col-md-4">
-			              			<label class="politician">{{candidate.name}} {{candidate.party}}
+			              			<label class="politician">{{candidate.name}} {{candidate.party}} <span ng-show="(candidate.endorsed)">*</span>
 									  <input type="radio" name="politico" ng-model="$parent.politico" ng-change="selectRaceCandidate(candidate.name)" ng-value="candidate.name">
 									  <span style="background-color:{{candidate.partyColor}}" class="checkmark"></span>
 									</label>
@@ -150,7 +150,7 @@
 		              		</span>
 		              	</div>
               			<div class="moredetails ng-hide" ng-show="politico">
-              				<div ng-repeat="candidate in candidates | filter: race.office:true | filter: filterByRaceCandidate:true | orderBy: 'party'"> 
+              				<div ng-repeat="candidate in candidates | filter: race.office:true | filter: filterByRaceCandidate:true | orderBy: 'party'">
 	              				<div class="candidate col-md-10 col-md-offset-1">
 	              					<div class="col-md-4">
 		              					<img class="img-responsive" src="{{candidate.image}}">
@@ -165,29 +165,32 @@
 										<p ng-hide="!(candidate.birthplace)"><span class="question">Born:</span> {{candidate.birthplace}}</p>
 					              		<p ng-hide="!(candidate.hometown)"><span class="question">Hometown:</span> {{candidate.hometown}}</p>
 					              		<p ng-hide="!(candidate.job)"><span class="question">Current job:</span> {{candidate.job}}</p>
-					              		<p ng-hide="!(candidate.education)"><span class="question">Highest education:</span> {{candidate.education}}</p>	
+					              		<p ng-hide="!(candidate.education)"><span class="question">Highest education:</span> {{candidate.education}}</p>
 									</div>
 									<div class="col-md-4">
 					              		<p ng-hide="!(candidate.college)"><span class="question">College:</span> {{candidate.college}}</p>
 					              		<p ng-hide="!(candidate.married)"><span class="question">Marital status: </span> {{candidate.married}}</p>
-					              		<p ng-hide="!(candidate.kids)"><span class="question">Children:</span> {{candidate.kids}}</p> 
+					              		<p ng-hide="!(candidate.kids)"><span class="question">Children:</span> {{candidate.kids}}</p>
 					              		<p ng-hide="!(candidate.military)"><span  class="question">Military service:</span> {{candidate.military}}. {{candidate.milBranch}}</p>
 					              		<p ng-hide="!(candidate.prevServed)"><span  class="question">Previous served</span> {{candidate.prevServed}}. {{candidate.prevOffice}}</p>
 				              		</div>
 				              		<div class="col-md-8" ng-show="!(candidate.hometown) && !(candidate.unopposed)">
-					              		<h3 class="noresponse">The candidate did not respond to the Houston Chronicle survey.</h3> 
+					              		<h3 class="noresponse">The candidate did not respond to the Houston Chronicle survey.</h3>
 					              	</div>
 					              	<div class="col-md-8" ng-hide="!(candidate.unopposed)">
-					              		<h3 class="noresponse">This candidate is running unopposed.</h3> 
+					              		<h3 class="noresponse">This candidate is running unopposed.</h3>
+					              	</div>
+					              	<div class="col-md-8" ng-show="(candidate.endorsed)">
+					              		<h3 class="noresponse">* This candidate was endorsed by the Houston Chronicle Editorial Board.</h3>
 					              	</div>
 			              		</div>
 								<div class="moreanswers">
-				              		<div ng-hide="!(candidate.difference)" class="col-md-8 col-md-offset-2">		              	
-										<p class="question">What sets you apart from your opponents?</p>	
+				              		<div ng-hide="!(candidate.difference)" class="col-md-8 col-md-offset-2">
+										<p class="question">What sets you apart from your opponents?</p>
 					              		<p>{{candidate.difference}}</p>
-					              		<p class="question">Why are you running for office?</p>		              		
-					              		<p>{{candidate.reason}}</p>					              		
-					              		<p class="question">What are your top three priorities for Texas?</p>	
+					              		<p class="question">Why are you running for office?</p>
+					              		<p>{{candidate.reason}}</p>
+					              		<p class="question">What are your top three priorities for Texas?</p>
 					              		<p>1. {{candidate.priority1}}</p>
 					              		<p>2. {{candidate.priority2}}</p>
 					              		<p>3. {{candidate.priority3}}</p>
@@ -205,6 +208,20 @@
              		</div>
 				</div>
 			</div><!--End race select results-->
+			<!--All races results-->
+			<div class="results ng-hide" ng-show="allRaces">
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1">
+						<p>Click on an individual race to see the candidates running for that office.</p>
+						<div ng-repeat="level in levels">
+							<h3 class="levels">{{level.level}} races</h3>
+							<div ng-repeat="race in races | filter: {level: level.level}">
+		              			<p class="racechoice" ng-click="selectRace(race.office)">{{race.office}}</p>
+			              	</div>
+             			</div>
+					</div>
+				</div>
+			</div><!--End all races results-->
 			<!--Candidate results-->
 			<div ng-model="candidateResults" class="results ng-hide" ng-show="candidateSelected">
 				<div ng-repeat="candidate in candidates | filter: filterByCandidate:true">
@@ -223,29 +240,32 @@
 								<p ng-hide="!(candidate.birthplace)"><span class="question">Born:</span> {{candidate.birthplace}}</p>
 			              		<p ng-hide="!(candidate.hometown)"><span class="question">Hometown:</span> {{candidate.hometown}}</p>
 			              		<p ng-hide="!(candidate.job)"><span class="question">Current job:</span> {{candidate.job}}</p>
-			              		<p ng-hide="!(candidate.education)"><span class="question">Highest education:</span> {{candidate.education}}</p>	
+			              		<p ng-hide="!(candidate.education)"><span class="question">Highest education:</span> {{candidate.education}}</p>
 							</div>
 							<div class="col-md-4">
 			              		<p ng-hide="!(candidate.college)"><span class="question">College:</span> {{candidate.college}}</p>
 			              		<p ng-hide="!(candidate.married)"><span class="question">Marital status: </span> {{candidate.married}}</p>
-			              		<p ng-hide="!(candidate.kids)"><span class="question">Children:</span> {{candidate.kids}}</p> 
+			              		<p ng-hide="!(candidate.kids)"><span class="question">Children:</span> {{candidate.kids}}</p>
 			              		<p ng-hide="!(candidate.military)"><span  class="question">Military service:</span> {{candidate.military}}. {{candidate.milBranch}}</p>
 			              		<p ng-hide="!(candidate.prevServed)"><span  class="question">Previous served</span> {{candidate.prevServed}}. {{candidate.prevOffice}}</p>
 		              		</div>
 		              		<div class="col-md-8" ng-show="!(candidate.hometown) && !(candidate.unopposed)">
-			              		<h3 class="noresponse">The candidate did not respond to the Houston Chronicle survey.</h3>  
+			              		<h3 class="noresponse">The candidate did not respond to the Houston Chronicle survey.</h3>
 			              	</div>
 			              	<div class="col-md-8" ng-hide="!(candidate.unopposed)">
-			              		<h3 class="noresponse">This candidate is running unopposed.</h3> 
+			              		<h3 class="noresponse">This candidate is running unopposed.</h3>
+			              	</div>
+			              	<div class="col-md-8" ng-show="(candidate.endorsed)">
+			              		<h3 class="noresponse">* This candidate was endorsed by the Houston Chronicle Editorial Board.</h3>
 			              	</div>
 		              	</div>
 		              	<div class="moreanswers">
-		              		<div ng-hide="!(candidate.difference)" class="col-md-8 col-md-offset-2">		              	
-								<p class="question">What sets you apart from your opponents?</p>	
+		              		<div ng-hide="!(candidate.difference)" class="col-md-8 col-md-offset-2">
+								<p class="question">What sets you apart from your opponents?</p>
 			              		<p>{{candidate.difference}}</p>
-			              		<p class="question">Why are you running for office?</p>		              		
-			              		<p>{{candidate.reason}}</p>					              		
-			              		<p class="question">What are your top three priorities for Texas?</p>	
+			              		<p class="question">Why are you running for office?</p>
+			              		<p>{{candidate.reason}}</p>
+			              		<p class="question">What are your top three priorities for Texas?</p>
 			              		<p>1. {{candidate.priority1}}</p>
 			              		<p>2. {{candidate.priority2}}</p>
 			              		<p>3. {{candidate.priority3}}</p>
@@ -254,7 +274,7 @@
 			              		<div ng-hide="!(candidate.contact)" class="candidatecontact">
 				              		<p><strong>Contact</strong></p>
 				              		<p>{{candidate.contact}}</p>
-				              	</div>				         
+				              	</div>
 				              <p class="return"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i><a href="#search"> Return to searches</a></p>
 			              	</div>
 						</div>
@@ -297,14 +317,13 @@
 			</div>
 		</div>
 	</div><!--End app-->
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script> 
-<script src="js/guide.js"></script> 
-</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/guide.js"></script>
+	</body>
 </html>

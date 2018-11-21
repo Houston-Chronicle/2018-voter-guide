@@ -111,6 +111,15 @@ select:hover {
 .results {
     margin-bottom:10vh;
 }
+h3.levels {
+    margin: 36px 0 24px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.racechoice:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 .candidate {
     background-color:#DBDBDB19;
     padding:25px;
@@ -166,7 +175,7 @@ select:hover {
 }
 /*No response*/
 .noresponse {
-    font-size:18px;
+    font-size:16px;
     font-family: 'Lora', serif;
     font-style:italic;
     margin-top:24px;
@@ -415,4 +424,28 @@ nav a {
     .navbar-default .navbar-collapse {
         max-height:100vh;
     }
+}
+/*Misc styles*/
+.locations .intro {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+#results .race {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.content {
+    margin-bottom: 24px;
+}
+.content p, .poll p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin-bottom: 1px;
+}
+.warning {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  margin-top: 24px;
 }
